@@ -1,0 +1,19 @@
+<!-- DTD para la estructura de datos.xml de NBA Noticias -->
+<!ELEMENT catalogonoticias (noticia+)>
+<!ATTLIST catalogonoticias version CDATA #REQUIRED>
+
+<!ELEMENT noticia (titulo, fecha, autor, resumen, contenido, imagen, lecturaMinutos, etiquetas)>
+<!ATTLIST noticia id ID #REQUIRED>
+<!ATTLIST noticia categoria (playoffs|draft|fichajes|mvp|general) "general">
+<!ATTLIST noticia destacado (true|false) "false">
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT lecturaMinutos (#PCDATA)>
+
+<!ELEMENT etiquetas (etiqueta+)>
+<!ELEMENT etiqueta (#PCDATA)>

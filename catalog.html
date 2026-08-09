@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo Dinámico de Noticias de la NBA generado automáticamente a partir de datos XML mediante hojas de estilo XSLT.">
+  <title>NBA Noticias | Catálogo Dinámico (XML + XSLT)</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior de Acento -->
+  <div class="header-top"></div>
+
+  <!-- Encabezado Principal y Navegación -->
+  <header class="main-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo-brand" aria-label="Página de inicio de NBA Noticias">
+        <span class="logo-badge">NBA</span>
+        <div class="logo-text">NOTICIAS<span>.</span></div>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="about.html" class="nav-link">Nosotros</a>
+        <a href="catalog.html" class="nav-link active">Catálogo Noticias</a>
+        <a href="contact.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container" id="main-content" role="main">
+
+    <!-- Encabezado de Sección del Catálogo -->
+    <div style="margin-bottom: 2rem;">
+      <span class="category-badge" style="background: var(--accent-gold); color: #000;">TRANSFORMACIÓN XSLT OBLIGATORIA</span>
+      <h1 style="font-size: 2.4rem; margin: 0.5rem 0 1rem 0; color: var(--text-main);">Catálogo Dinámico de Noticias NBA</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 850px;">
+        Este catálogo se genera dinámicamente procesando la fuente de datos <code>xml/datos.xml</code> a través de la hoja de estilos de transformación <code>xml/estilos.xsl</code>, validado estructuralmente bajo <code>datos.dtd</code> y <code>datos.xsd</code>.
+      </p>
+    </div>
+
+    <!-- Acceso Rápido a Archivos Fuente XML/XSLT/XSD/DTD para la Evaluación -->
+    <div style="background: var(--bg-card); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span style="font-size: 1.5rem;">📄</span>
+        <div>
+          <strong style="color: var(--text-main); font-size: 0.95rem;">Archivos Fuente de Verificación Técnica:</strong>
+          <p style="color: var(--text-dim); font-size: 0.82rem;">Estructura XML de 6+ registros validada con esquemas DTD y XSD.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+        <a href="xml/datos.xml" target="_blank" style="background: rgba(29, 99, 237, 0.15); color: var(--primary-nba); border: 1px solid var(--primary-nba); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">datos.xml</a>
+        <a href="xml/estilos.xsl" target="_blank" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">estilos.xsl</a>
+        <a href="xml/datos.dtd" target="_blank" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">datos.dtd</a>
+        <a href="xml/datos.xsd" target="_blank" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">datos.xsd</a>
+      </div>
+    </div>
+
+    <!-- Barra de Filtros Dinámicos -->
+    <section aria-label="Filtros del catálogo por categoría">
+      <div class="catalog-filter-bar">
+        <span style="font-weight: 700; color: var(--text-main); font-size: 0.9rem; margin-right: 0.5rem;">Filtrar Noticias:</span>
+        <button class="filter-btn active" data-filter="todos">Todas las Noticias</button>
+        <button class="filter-btn" data-filter="playoffs">Playoffs</button>
+        <button class="filter-btn" data-filter="mvp">MVP</button>
+        <button class="filter-btn" data-filter="draft">Draft NBA</button>
+        <button class="filter-btn" data-filter="fichajes">Fichajes</button>
+        <button class="filter-btn" data-filter="general">General</button>
+      </div>
+    </section>
+
+    <!-- Contenedor del Catálogo XSLT Dinámico -->
+    <section id="catalog-container" aria-live="polite" aria-label="Noticias del catálogo dinámico">
+      <!-- Se llena dinámicamente mediante el cargador XSLTProcessor en js/main.js -->
+      <div style="text-align: center; padding: 4rem 2rem; color: var(--text-muted);">
+        <p style="font-size: 1.2rem;">⚡ Cargando y transformando catálogo XML mediante XSLT...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="index.html" class="logo-brand">
+          <span class="logo-badge">NBA</span>
+          <div class="logo-text">NOTICIAS<span>.</span></div>
+        </a>
+        <p>Tu portal especializado en cobertura periodística, análisis de datos XML, estadísticas avanzadas y la actualidad del baloncesto mundial.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="catalog.html">Catálogo XML</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Categorías</h4>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Playoffs</a></li>
+          <li><a href="catalog.html">Draft NBA</a></li>
+          <li><a href="catalog.html">Mercado & Traspasos</a></li>
+          <li><a href="catalog.html">Premios MVP</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Recursos Técnicos</h4>
+        <ul class="footer-links">
+          <li><a href="xml/datos.xml" target="_blank">Archivo datos.xml</a></li>
+          <li><a href="xml/datos.dtd" target="_blank">Estructura datos.dtd</a></li>
+          <li><a href="xml/datos.xsd" target="_blank">Esquema datos.xsd</a></li>
+          <li><a href="xml/estilos.xsl" target="_blank">Plantilla estilos.xsl</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 NBA Noticias. Proyecto Académico - HTML5, CSS3, XML & XSLT.</p>
+      <p>Publicado en GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

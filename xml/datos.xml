@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="estilos.xsl"?>
+<!DOCTYPE catalogonoticias SYSTEM "datos.dtd">
+<catalogonoticias version="2.0">
+
+  <noticia id="nba-101" categoria="playoffs" destacado="true">
+    <titulo>Finales NBA 2026: Batalla Épica en el Séptimo Juego por el Anillo de Campeón</titulo>
+    <fecha>2026-06-18</fecha>
+    <autor>Carlos Mendoza</autor>
+    <resumen>Una actuación histórica en los últimos segundos define el título de la NBA en una serie de playoffs inolvidable llena de tensión y estrategia de alto nivel.</resumen>
+    <contenido>El séptimo partido de las finales ofreció un espectáculo inolvidable para los fanáticos del baloncesto mundial. Con una defensa asfixiante en los últimos dos minutos y un triple decisivo faltando 4 segundos, el equipo coronó una temporada impecable en el baloncesto profesional estadounidense.</contenido>
+    <imagen>assets/images/nba_playoffs.jpg</imagen>
+    <lecturaMinutos>5</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>Playoffs</etiqueta>
+      <etiqueta>FinalesNBA</etiqueta>
+      <etiqueta>Campeones</etiqueta>
+    </etiquetas>
+  </noticia>
+
+  <noticia id="nba-102" categoria="mvp" destacado="true">
+    <titulo>Anuncio Oficial del MVP 2026: Dominio Total y Récords Rotos en la Liga</titulo>
+    <fecha>2026-05-24</fecha>
+    <autor>Sofia Ramírez</autor>
+    <resumen>Con promedios astronómicos de triple-doble y liderando a su franquicia al mejor récord de la temporada regular, el premio al Jugador Más Valioso fue otorgado por unanimidad.</resumen>
+    <contenido>La votación oficial de la prensa deportiva confirmó lo que se vio en la cancha durante toda la fase regular. El estelar base registró actuaciones memorables, rompiendo marcas históricas de efectividad en tiros de campo y asistencias.</contenido>
+    <imagen>assets/images/nba_mvp.jpg</imagen>
+    <lecturaMinutos>4</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>MVP</etiqueta>
+      <etiqueta>PremiosNBA</etiqueta>
+      <etiqueta>Records</etiqueta>
+    </etiquetas>
+  </noticia>
+
+  <noticia id="nba-103" categoria="draft" destacado="false">
+    <titulo>NBA Draft 2026: La Primera Selección Promete Revolucionar la Liga</titulo>
+    <fecha>2026-06-25</fecha>
+    <autor>Alejandro Silva</autor>
+    <resumen>Las futuras estrellas del baloncesto universitario e internacional conocen sus nuevos destinos en una noche llena de sorpresas e intercambios estratégicos.</resumen>
+    <contenido>El Barclays Center fue escenario de una jornada electrizante donde la primera selección global desató la ovación del público. Con una envergadura impresionante y un tiro exterior desarrollado a la perfección, este prospecto está listo para impactar desde el primer día.</contenido>
+    <imagen>assets/images/nba_draft.jpg</imagen>
+    <lecturaMinutos>6</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>Draft2026</etiqueta>
+      <etiqueta>Rookies</etiqueta>
+      <etiqueta>FuturoNBA</etiqueta>
+    </etiquetas>
+  </noticia>
+
+  <noticia id="nba-104" categoria="fichajes" destacado="false">
+    <titulo>Mega Traspaso Sacude el Mercado de Agentes Libres en la Conferencia Oeste</titulo>
+    <fecha>2026-07-02</fecha>
+    <autor>Javier Torres</autor>
+    <resumen>Múltiples All-Stars cambian de camiseta en un acuerdo de tres equipos que altera drásticamente el equilibrio de poder para la próxima campaña.</resumen>
+    <contenido>En uno de los movimientos más audaces de los últimos años, tres franquicias llegaron a un acuerdo multijugador que incluye varias elecciones de primera ronda del draft y veteranos consolidados.</contenido>
+    <imagen>assets/images/nba_hero_banner.jpg</imagen>
+    <lecturaMinutos>4</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>AgenciaLibre</etiqueta>
+      <etiqueta>Traspasos</etiqueta>
+      <etiqueta>MercadoNBA</etiqueta>
+    </etiquetas>
+  </noticia>
+
+  <noticia id="nba-105" categoria="general" destacado="false">
+    <titulo>Nuevas Reglas Arbitrales y Uso de Tecnología IA en la NBA 2026-2027</titulo>
+    <fecha>2026-07-15</fecha>
+    <autor>Elena Gómez</autor>
+    <resumen>La junta de gobernadores de la NBA aprueba ajustes en las faltas ofensivas y sistemas de revisión instantánea para agilizar el ritmo de los partidos.</resumen>
+    <contenido>Buscando mejorar la fluidez del juego y la precisión en las decisiones arbitrales decisivas, la liga implementará asistentes de revisión asistidos por inteligencia artificial en las jugadas fuera de banda y tiros sobre la bocina.</contenido>
+    <imagen>assets/images/nba_hero_banner.jpg</imagen>
+    <lecturaMinutos>3</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>Reglamento</etiqueta>
+      <etiqueta>Tecnologia</etiqueta>
+      <etiqueta>Innovacion</etiqueta>
+    </etiquetas>
+  </noticia>
+
+  <noticia id="nba-106" categoria="playoffs" destacado="false">
+    <titulo>Análisis Táctico: El Renacimiento del Juego en la Pintura y el Pívot Moderno</titulo>
+    <fecha>2026-08-01</fecha>
+    <autor>Carlos Mendoza</autor>
+    <resumen>Un repaso profundo a cómo los hombres altos con visión de juego y tiro de tres han transformado los esquemas defensivos de la liga.</resumen>
+    <contenido>La evolución del baloncesto moderno ha tomado un giro fascinante: los pívots ya no solo dominan bajo el aro, sino que distribuyen el juego desde la cabecera y amenazan la zona perimetral con alta efectividad.</contenido>
+    <imagen>assets/images/nba_playoffs.jpg</imagen>
+    <lecturaMinutos>5</lecturaMinutos>
+    <etiquetas>
+      <etiqueta>Táctica</etiqueta>
+      <etiqueta>Evolución</etiqueta>
+      <etiqueta>Estadísticas</etiqueta>
+    </etiquetas>
+  </noticia>
+
+</catalogonoticias>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Elemento Raíz -->
+  <xs:element name="catalogonoticias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="noticia" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="fecha" type="xs:date"/>
+              <xs:element name="autor" type="xs:string"/>
+              <xs:element name="resumen" type="xs:string"/>
+              <xs:element name="contenido" type="xs:string"/>
+              <xs:element name="imagen" type="xs:string"/>
+              <xs:element name="lecturaMinutos" type="xs:positiveInteger"/>
+              <xs:element name="etiquetas">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="etiqueta" type="xs:string" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            
+            <!-- Atributos de la noticia -->
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="categoria" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="playoffs"/>
+                  <xs:enumeration value="draft"/>
+                  <xs:enumeration value="fichajes"/>
+                  <xs:enumeration value="mvp"/>
+                  <xs:enumeration value="general"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="destacado" type="xs:boolean" default="false"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
