@@ -7,7 +7,7 @@
       <xsl:for-each select="catalogonoticias/noticia">
         <xsl:sort select="fecha" order="descending"/>
         
-        <article class="news-card" data-category="{@categoria}">
+        <article class="news-card" data-category="{@categoria}" data-article-id="{@id}">
           <div class="news-card-img">
             <img src="{imagen}" alt="{titulo}"/>
             <span class="category-badge {@categoria}" style="position: absolute; top: 1rem; left: 1rem; margin: 0;">
